@@ -22,12 +22,31 @@ def get_movie(movie_id: str):
     * `num_lines`: The number of lines the character has in the movie.
 
     """
-
-    for movie in db.movies:
-        if movie["movie_id"] == id:
-            print("movie found")
-
     json = None
+    title = None
+    sorted_list = None
+    exist = False
+    for movie in db.movies:
+        if movie["movie_id"] == movie_id:
+            exist = True
+            title = movie["title"]
+            ls_chars = []
+            for character in db.characters:
+                if character["movie_id"] == movie_id:
+                    charc = {"character_id": character["character_id"], "character": character["name"], "num_lines": 0}
+                    for line in db.lines:
+                        if line["movie_id"] == movie_id and line["character_id"] == character["character_id"]:
+                            charc["num_lines"] += 1
+                    ls_chars.append(charc)
+            sorted_list = sorted(ls_chars, key=lambda k: k["num_lines"], reverse=True)
+
+    if exist:
+        json = {
+            "movie_id": movie_id,
+            "title": title,
+            "top_characters": sorted_list[:5],
+        }
+
 
     if json is None:
         raise HTTPException(status_code=404, detail="movie not found.")
@@ -71,6 +90,20 @@ def list_movies(
     maximum number of results to return. The `offset` query parameter specifies the
     number of results to skip before returning results.
     """
-    json = None
+    lst = []
+    sorted_list = None
+    for movie in db.movies:
+        if movie["title"] == "":
+            continue
+        if name != "" and name.lower() not in movie["title"]:
+            continue
+        mv = {"movie_id": movie["movie_id"], "movie_title": movie["title"], "year": movie["year"], "imdb_rating": movie["imdb_rating"], "imdb_votes": movie["imdb_votes"]}
+        lst.append(mv)
+
+    if sort.name == "rating":
+        sorted_list = sorted(lst, key=lambda k: k["imdb_rating"], reverse=True)
+    elif sort.name == "movie_title":
+        sorted_list = sorted(lst, key=lambda k: k["movie_title"])
+    json = sorted_list[offset:limit+offset]
 
     return json
