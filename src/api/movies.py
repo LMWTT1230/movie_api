@@ -91,7 +91,6 @@ def list_movies(
     number of results to skip before returning results.
     """
     lst = []
-    sorted_list = None
     for movie in db.movies:
         if movie["title"] == "":
             continue
@@ -104,6 +103,8 @@ def list_movies(
         sorted_list = sorted(lst, key=lambda k: k["imdb_rating"], reverse=True)
     elif sort.name == "movie_title":
         sorted_list = sorted(lst, key=lambda k: k["movie_title"])
+    else:
+        sorted_list = sorted(lst, key=lambda k: k["year"])
     json = sorted_list[offset:limit+offset]
 
     return json

@@ -1,0 +1,23 @@
+[
+  {
+    "movie_id": "422",
+    "movie_title": "lock stock and two smoking barrels",
+    "year": "1998",
+    "imdb_rating": "8.2",
+    "imdb_votes": "129117"
+  },
+  {
+    "movie_id": "570",
+    "movie_title": "three kings",
+    "year": "1999",
+    "imdb_rating": "7.3",
+    "imdb_votes": "69757"
+  },
+  {
+    "movie_id": "414",
+    "movie_title": "king kong",
+    "year": "2005",
+    "imdb_rating": "7.6",
+    "imdb_votes": "134187"
+  }
+]

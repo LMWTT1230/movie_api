@@ -1,0 +1,26 @@
+[
+  {
+    "character_id": "1450",
+    "character": "STEVE",
+    "movie": "independence day",
+    "number_of_lines": 32
+  },
+  {
+    "character_id": "6579",
+    "character": "STEVENS",
+    "movie": "miami vice",
+    "number_of_lines": 14
+  },
+  {
+    "character_id": "7347",
+    "character": "STEVEN REIGN",
+    "movie": "rush hour 2",
+    "number_of_lines": 4
+  },
+  {
+    "character_id": "3343",
+    "character": "STEVENS",
+    "movie": "total recall",
+    "number_of_lines": 4
+  }
+]

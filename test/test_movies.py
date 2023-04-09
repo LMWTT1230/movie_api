@@ -14,6 +14,12 @@ def test_get_movie():
     with open("test/movies/44.json", encoding="utf-8") as f:
         assert response.json() == json.load(f)
 
+def test_get_movie1():
+    response = client.get("/movies/555")
+    assert response.status_code == 200
+
+    with open("test/movies/555.json", encoding="utf-8") as f:
+        assert response.json() == json.load(f)
 
 def test_movies():
     response = client.get("/movies/")
@@ -29,6 +35,16 @@ def test_sort_filter():
 
     with open(
         "test/movies/movies-name=big&limit=50&offset=0&sort=rating.json",
+        encoding="utf-8",
+    ) as f:
+        assert response.json() == json.load(f)
+
+def test_sort_filter1():
+    response = client.get("/movies/?name=king&limit=50&offset=0&sort=year")
+    assert response.status_code == 200
+
+    with open(
+        "test/movies/movies-name=king&limit=50&offset=0&sort=year.json",
         encoding="utf-8",
     ) as f:
         assert response.json() == json.load(f)
