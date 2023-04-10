@@ -1,11 +1,11 @@
 {
-    "character_id": "5283",
+    "character_id": 5283,
     "character": "NORA",
     "movie": "final destination 2",
     "gender": null,
     "top_conversations": [
         {
-            "character_id": "5288",
+            "character_id": 5288,
             "character": "TIM",
             "gender": null,
             "number_of_lines_together": 11

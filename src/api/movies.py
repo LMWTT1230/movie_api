@@ -33,7 +33,7 @@ def get_movie(movie_id: str):
             ls_chars = []
             for character in db.characters:
                 if character["movie_id"] == movie_id:
-                    charc = {"character_id": character["character_id"], "character": character["name"], "num_lines": 0}
+                    charc = {"character_id": int(character["character_id"]), "character": character["name"], "num_lines": 0}
                     for line in db.lines:
                         if line["movie_id"] == movie_id and line["character_id"] == character["character_id"]:
                             charc["num_lines"] += 1
@@ -42,7 +42,7 @@ def get_movie(movie_id: str):
 
     if exist:
         json = {
-            "movie_id": movie_id,
+            "movie_id": int(movie_id),
             "title": title,
             "top_characters": sorted_list[:5],
         }
@@ -96,7 +96,7 @@ def list_movies(
             continue
         if name != "" and name.lower() not in movie["title"]:
             continue
-        mv = {"movie_id": movie["movie_id"], "movie_title": movie["title"], "year": movie["year"], "imdb_rating": movie["imdb_rating"], "imdb_votes": movie["imdb_votes"]}
+        mv = {"movie_id": int(movie["movie_id"]), "movie_title": movie["title"], "year": movie["year"], "imdb_rating": float(movie["imdb_rating"]), "imdb_votes": int(movie["imdb_votes"])}
         lst.append(mv)
 
     if sort.name == "rating":

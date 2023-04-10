@@ -54,7 +54,7 @@ def get_character(id: str):
                 else:
                     continue
                 for item in ls_conv:
-                    if item["character_id"] == id2:
+                    if item["character_id"] == int(id2):
                         exist1 = True
                         dict = item
                 if not exist1:
@@ -63,7 +63,7 @@ def get_character(id: str):
                             name2 = c["name"]
                             if c["gender"] != "":
                                 gender2 = c["gender"]
-                    conversation = {'character_id': id2, 'character': name2, 'gender': gender2, 'number_of_lines_together': 0}
+                    conversation = {'character_id': int(id2), 'character': name2, 'gender': gender2, 'number_of_lines_together': 0}
                     dict = conversation
                     ls_conv.append(conversation)
                 for line in db.lines:
@@ -74,7 +74,7 @@ def get_character(id: str):
 
     if exist:
         json = {
-            "character_id": id,
+            "character_id": int(id),
             "character": name1,
             "movie": title,
             "gender": gender1,
@@ -136,7 +136,7 @@ def list_characters(
         for line in db.lines:
             if line["character_id"] == character["character_id"] and line["movie_id"] == character["movie_id"]:
                 num_of_lines += 1
-        charc = {"character_id": character["character_id"], "character": character["name"], "movie": title, "number_of_lines": num_of_lines}
+        charc = {"character_id": int(character["character_id"]), "character": character["name"], "movie": title, "number_of_lines": num_of_lines}
         lst.append(charc)
     sorted_list = sorted(lst, key=lambda k: k[sort.name])
     if sort.name == "number_of_lines":
