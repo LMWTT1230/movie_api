@@ -26,20 +26,16 @@ def get_movie(movie_id: str):
     title = None
     sorted_list = None
     exist = False
-    for movie in db.movies:
-        if movie["movie_id"] == movie_id:
+    top_chars = []
+    for item in db.data:
+        if item["movie_id"] == movie_id:
             exist = True
-            title = movie["title"]
-            ls_chars = []
-            for character in db.characters:
-                if character["movie_id"] == movie_id:
-                    charc = {"character_id": int(character["character_id"]), "character": character["name"], "num_lines": 0}
-                    for line in db.lines:
-                        if line["movie_id"] == movie_id and line["character_id"] == character["character_id"]:
-                            charc["num_lines"] += 1
-                    ls_chars.append(charc)
-            sorted_list = sorted(ls_chars, key=lambda k: k["num_lines"], reverse=True)
+            title = item["title"]
+            charc = {"character_id": int(item["character_id"]), "character": item["name"],
+                     "num_lines": item["number_of_lines"]}
+            top_chars.append(charc)
 
+    sorted_list = sorted(top_chars, key=lambda k: k["num_lines"], reverse=True)
     if exist:
         json = {
             "movie_id": int(movie_id),

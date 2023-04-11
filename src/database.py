@@ -4,8 +4,6 @@ import csv
 # an example of reading the CSV files where you will get the data to complete
 # the assignment.
 
-print("reading movies")
-
 with open("movies.csv", mode="r", encoding="utf8") as csv_file:
     movies = [
         {k: v for k, v in row.items()}
@@ -29,3 +27,25 @@ with open("lines.csv", mode="r", encoding="utf8") as csv_file:
         {k: v for k, v in row.items()}
         for row in csv.DictReader(csv_file, skipinitialspace=True)
     ]
+
+
+data = [dict(characters[id],**movies[id]) for id in characters if id in movies]
+for character in characters:
+    num_of_lines = 0
+    for movie in movies:
+        if movie["movie_id"] == character["movie_id"]:
+            character.update(movie)
+    ch_lines = []
+    for line in lines:
+        if line["movie_id"] == character["movie_id"]:
+            ch_lines.append(line)
+            if line["character_id"] == character["character_id"]:
+                num_of_lines += 1
+    character["lines"] = ch_lines
+    character["number_of_lines"] = num_of_lines
+    convs = []
+    for conv in conversations:
+        if conv["character1_id"] == character["character_id"] or conv["character2_id"] == character["character_id"]:
+            convs.append(conv)
+    character["convs"] = convs
+    data.append(character)

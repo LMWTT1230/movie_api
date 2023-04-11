@@ -32,18 +32,17 @@ def get_character(id: str):
     title = None
     sorted_list = None
     exist = False
-    for character in db.characters:
+    for character in db.data:
         if character["character_id"] == id:
             exist = True
             name1 = character["name"]
             if character["gender"] != "":
                 gender1 = character["gender"]
-            for movie in db.movies:
-                if movie["movie_id"] == character["movie_id"]:
-                    title = movie["title"]
-            ls_conv = []
-            for conv in db.conversations:
-                dict = None
+            title = character["title"]
+            top_conv = []
+            for conv in character["convs"]:
+                conversation = None
+                id2 = None
                 name2 = None
                 gender2 = None
                 exist1 = False
@@ -51,26 +50,23 @@ def get_character(id: str):
                     id2 = conv["character2_id"]
                 elif conv["character2_id"] == id:
                     id2 = conv["character1_id"]
-                else:
-                    continue
-                for item in ls_conv:
+                for item in top_conv:
                     if item["character_id"] == int(id2):
                         exist1 = True
-                        dict = item
+                        conversation = item
                 if not exist1:
-                    for c in db.characters:
+                    for c in db.data:
                         if c["character_id"] == id2:
                             name2 = c["name"]
                             if c["gender"] != "":
                                 gender2 = c["gender"]
                     conversation = {'character_id': int(id2), 'character': name2, 'gender': gender2, 'number_of_lines_together': 0}
-                    dict = conversation
-                    ls_conv.append(conversation)
-                for line in db.lines:
+                    top_conv.append(conversation)
+                for line in character["lines"]:
                     if line["conversation_id"] == conv["conversation_id"]:
-                        dict["number_of_lines_together"] += 1
+                        conversation["number_of_lines_together"] += 1
 
-            sorted_list = sorted(ls_conv, key=lambda k: k["number_of_lines_together"], reverse= True)
+            sorted_list = sorted(top_conv, key=lambda k: k["number_of_lines_together"], reverse= True)
 
     if exist:
         json = {
@@ -123,20 +119,12 @@ def list_characters(
     number of results to skip before returning results.
     """
     lst = []
-    for character in db.characters:
-        num_of_lines = 0
-        title = None
+    for character in db.data:
         if character["name"] == "":
             continue
         if name != "" and name.upper() not in character["name"]:
             continue
-        for movie in db.movies:
-            if movie["movie_id"] == character["movie_id"]:
-                title = movie["title"]
-        for line in db.lines:
-            if line["character_id"] == character["character_id"] and line["movie_id"] == character["movie_id"]:
-                num_of_lines += 1
-        charc = {"character_id": int(character["character_id"]), "character": character["name"], "movie": title, "number_of_lines": num_of_lines}
+        charc = {"character_id": int(character["character_id"]), "character": character["name"], "movie": character["title"], "number_of_lines": character["number_of_lines"]}
         lst.append(charc)
     sorted_list = sorted(lst, key=lambda k: k[sort.name])
     if sort.name == "number_of_lines":
