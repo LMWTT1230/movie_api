@@ -1,51 +1,68 @@
 import csv
+from src.datatypes import Character, Movie, Conversation, Line
 
-# TODO: You will want to replace all of the code below. It is just to show you
-# an example of reading the CSV files where you will get the data to complete
-# the assignment.
+
+def try_parse(type, val):
+    try:
+        return type(val)
+    except ValueError:
+        return None
+
 
 with open("movies.csv", mode="r", encoding="utf8") as csv_file:
-    movies = [
-        {k: v for k, v in row.items()}
+    movies = {
+        try_parse(int, row["movie_id"]): Movie(
+            try_parse(int, row["movie_id"]),
+            row["title"] or None,
+            row["year"] or None,
+            try_parse(float, row["imdb_rating"]),
+            try_parse(int, row["imdb_votes"]),
+            row["raw_script_url"] or None,
+        )
         for row in csv.DictReader(csv_file, skipinitialspace=True)
-    ]
+    }
 
 with open("characters.csv", mode="r", encoding="utf8") as csv_file:
-    characters = [
-        {k: v for k, v in row.items()}
-        for row in csv.DictReader(csv_file, skipinitialspace=True)
-    ]
+    characters = {}
+    for row in csv.DictReader(csv_file, skipinitialspace=True):
+        char = Character(
+            try_parse(int, row["character_id"]),
+            row["name"] or None,
+            try_parse(int, row["movie_id"]),
+            row["gender"] or None,
+            try_parse(int, row["age"]),
+            0,
+        )
+        characters[char.id] = char
 
 with open("conversations.csv", mode="r", encoding="utf8") as csv_file:
-    conversations = [
-        {k: v for k, v in row.items()}
-        for row in csv.DictReader(csv_file, skipinitialspace=True)
-    ]
+    conversations = {}
+    for row in csv.DictReader(csv_file, skipinitialspace=True):
+        conv = Conversation(
+            try_parse(int, row["conversation_id"]),
+            try_parse(int, row["character1_id"]),
+            try_parse(int, row["character2_id"]),
+            try_parse(int, row["movie_id"]),
+            0,
+        )
+        conversations[conv.id] = conv
 
 with open("lines.csv", mode="r", encoding="utf8") as csv_file:
-    lines = [
-        {k: v for k, v in row.items()}
-        for row in csv.DictReader(csv_file, skipinitialspace=True)
-    ]
+    lines = {}
+    for row in csv.DictReader(csv_file, skipinitialspace=True):
+        line = Line(
+            try_parse(int, row["line_id"]),
+            try_parse(int, row["character_id"]),
+            try_parse(int, row["movie_id"]),
+            try_parse(int, row["conversation_id"]),
+            try_parse(int, row["line_sort"]),
+            row["line_text"],
+        )
+        lines[line.id] = line
+        c = characters.get(line.c_id)
+        if c:
+            c.num_lines += 1
 
-
-data = [dict(characters[id],**movies[id]) for id in characters if id in movies]
-for character in characters:
-    num_of_lines = 0
-    for movie in movies:
-        if movie["movie_id"] == character["movie_id"]:
-            character.update(movie)
-    ch_lines = []
-    for line in lines:
-        if line["movie_id"] == character["movie_id"]:
-            ch_lines.append(line)
-            if line["character_id"] == character["character_id"]:
-                num_of_lines += 1
-    character["lines"] = ch_lines
-    character["number_of_lines"] = num_of_lines
-    convs = []
-    for conv in conversations:
-        if conv["character1_id"] == character["character_id"] or conv["character2_id"] == character["character_id"]:
-            convs.append(conv)
-    character["convs"] = convs
-    data.append(character)
+        conv = conversations.get(line.conv_id)
+        if conv:
+            conv.num_lines += 1
