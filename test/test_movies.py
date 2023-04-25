@@ -13,6 +13,7 @@ def test_get_movie():
 
     with open("test/movies/44.json", encoding="utf-8") as f:
         assert response.json() == json.load(f)
+    print(response.json())
 
 
 def test_movies():

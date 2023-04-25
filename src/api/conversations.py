@@ -2,7 +2,6 @@ from fastapi import APIRouter
 from src import database as db
 from pydantic import BaseModel
 from typing import List
-from datetime import datetime
 
 
 # FastAPI is inferring what the request body should look like
@@ -38,9 +37,17 @@ def add_conversation(movie_id: int, conversation: ConversationJson):
     The endpoint returns the id of the resulting conversation that was created.
     """
 
-    # TODO: Remove the following two lines. This is just a placeholder to show
-    # how you could implement persistent storage.
-
-    print(conversation)
-    db.logs.append({"post_call_time": datetime.now(), "movie_id_added_to": movie_id})
-    db.upload_new_log()
+    if db.characters.get(conversation.character_1_id).movie_id == movie_id and db.characters.get(conversation.character_2_id).movie_id == movie_id and conversation.character_1_id != conversation.character_2_id:
+        id = max(db.conversations.keys()) + 1
+        conv_dict = {"conversation_id": id, "character1_id": conversation.character_1_id, "character2_id": conversation.character_2_id, "movie_id": movie_id}
+        db.lst_convs.append(conv_dict)
+        db.update_convs(conv_dict)
+        line_id = max(db.lines.keys()) + 1
+        print(conversation.lines)
+        for i in range(len(conversation.lines)):
+            line_dict = {"line_id": line_id + i,"character_id": conversation.lines[i].character_id, "movie_id": movie_id, "conversation_id": id, "line_sort": i+1, "line_text": conversation.lines[i].line_text}
+            db.lst_lines.append(line_dict)
+            db.update_lines(line_dict)
+        db.upload_new_conv()
+        db.upload_new_line()
+        return id
