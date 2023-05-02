@@ -7,23 +7,40 @@ router = APIRouter()
 
 @router.get("/lines/{line_id}", tags=["lines"])
 def get_lines(line_id: int):
+    stmt = (
+        db.sqlalchemy.text("""
+        SELECT line.line_id, character.name, 
+        (select name from character where character_id = 
+        (select character2_id from conversation where conversation_id = line.conversation_id)) character2, line_text, title
+        FROM line
+        JOIN movie ON movie.movie_id = line.movie_id 
+        JOIN conversation on line.conversation_id = conversation.conversation_id
+        JOIN character on line.character_id = character.character_id
+        WHERE line_id = :id
+        """)
+    )
 
-    line = db.lines.get(line_id)
-    if line:
-        conv = db.conversations.get(line.conv_id)
-        character1 = db.characters.get(conv.c1_id)
-        character2 = db.characters.get(conv.c2_id)
-        movie = db.movies.get(line.movie_id)
-        result = {
-            "line_id": line_id,
-            "character1": character1.name,
-            "character2": character2.name,
-            "text": line.line_text,
-            "title": movie and movie.title,
-        }
-        return result
+    try:
+        with db.engine.connect() as conn:
+            json = []
+            result = conn.execute(stmt, {"id": line_id})
+            for row in result:
+                json.append(
+                    {
+                        "line_id": row.line_id,
+                        "character1": row.name,
+                        "character2": row.character2,
+                        "text" : row.line_text,
+                        "title" : row.title
+                    }
+                )
 
-    raise HTTPException(status_code=404, detail="line not found.")
+        return json
+    except Exception as e:
+        print(e)
+        raise HTTPException(status_code=404, detail="line not found.")
+
+
 
 
 class line_sort_options(str, Enum):

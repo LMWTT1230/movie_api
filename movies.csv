@@ -42,19 +42,19 @@ movie_id,title,year,imdb_rating,imdb_votes,raw_script_url
 97,independence day,1996,6.6,151698,http://www.dailyscript.com/scripts/Independence+Day.txt
 98,indiana jones and the last crusade,1989,8.3,174947,http://www.dailyscript.com/scripts/Indiana%20Jones%20And%20The%20Last%20Crusade.txt
 99,indiana jones and the temple of doom,1984,7.5,112054,http://www.dailyscript.com/scripts/Indiana%20Jones%20And%20The%20Temple%20Of%20Doom.txt
-101,the insider,1999,8.0,69660,http://www.dailyscript.com/scripts/Insider+The.txt
+101,the insider,1999,8,69660,http://www.dailyscript.com/scripts/Insider+The.txt
 102,intolerable cruelty,2003,6.4,36739,http://www.dailyscript.com/scripts/Intolerable%20Cruelty.txt
-104,jfk,1991,8.0,60406,http://www.dailyscript.com/scripts/JFK.txt
+104,jfk,1991,8,60406,http://www.dailyscript.com/scripts/JFK.txt
 105,jackie brown,1997,7.6,85496,http://www.dailyscript.com/scripts/Jackie+Brown.txt
 108,jaws,1975,8.3,140982,http://www.dailyscript.com/scripts/Jaws.txt
 109,juno,2007,7.9,152436,http://www.dailyscript.com/scripts/Juno.txt
-114,léon,1994,8.6,204901,http://www.scifiscripts.com/msol/LEON.txt
+114,l鑼卭n,1994,8.6,204901,http://www.scifiscripts.com/msol/LEON.txt
 116,leaving las vegas,1995,7.6,42919,http://www.dailyscript.com/scripts/Leaving+Las+Vegas.txt
 117,legally blonde,2001,6.2,44558,http://www.dailyscript.com/scripts/Legally%20Blonde.txt
 120,the life of david gale,2003,7.3,38237,http://www.dailyscript.com/scripts/Life.txt
-121,little nicky,2000,5.0,35489,http://www.dailyscript.com/scripts/Little+Nicky.txt
+121,little nicky,2000,5,35489,http://www.dailyscript.com/scripts/Little+Nicky.txt
 123,lost highway,1997,7.6,42998,http://www.dailyscript.com/scripts/Lost+Highway.txt
-125,men in black,1997,7.0,121719,http://www.dailyscript.com/scripts/Men+In+Black.txt
+125,men in black,1997,7,121719,http://www.dailyscript.com/scripts/Men+In+Black.txt
 126,minority report,2002,7.7,137009,http://www.dailyscript.com/scripts/Minority%20Report.txt
 129,man on fire,2004,7.7,76517,http://www.dailyscript.com/scripts/Man+On+Fire.txt
 134,metropolis,1927,8.4,40730,http://www.angelfire.com/movies/ridleyscott/script/Metropolis.txt
@@ -87,7 +87,7 @@ movie_id,title,year,imdb_rating,imdb_votes,raw_script_url
 206,the rock,1996,7.3,109533,http://www.awesomefilm.com/script/The-Rock.txt
 208,the birds,1963,7.9,53233,http://www.dailyscript.com/scripts/Birds%20The.txt
 211,the day the earth stood still,2008,5.5,52489,http://www.dailyscript.com/scripts/Day%20The%20Earth%20Stood%20Still%20The.txt
-212,the lost boys,1987,7.0,34826,http://home.online.no/~bhundlan/scripts/TheLostBoys.htm
+212,the lost boys,1987,7,34826,http://home.online.no/~bhundlan/scripts/TheLostBoys.htm
 213,the thing,1982,8.2,80904,http://www.dailyscript.com/scripts/Thing+The.txt
 214,the time machine,2002,5.7,32900,http://www.dailyscript.com/scripts/TheTimeMachine_1959.html
 215,the jacket,2005,7.1,36581,http://www.dailyscript.com/scripts/The_Jacket.html
@@ -100,7 +100,7 @@ movie_id,title,year,imdb_rating,imdb_votes,raw_script_url
 232,the abyss,1989,7.6,51699,http://www.dailyscript.com/scripts/abyss.html
 236,alien,1979,8.5,184471,http://www.horrorlair.com/scripts/alien.html
 238,all about eve,1950,8.5,35597,http://www.dailyscript.com/scripts/All%20About%20Eve.txt
-239,all the president's men,1976,8.0,32717,http://www.dailyscript.com/scripts/All%20The%20President's%20Men.txt
+239,all the president's men,1976,8,32717,http://www.dailyscript.com/scripts/All%20The%20President's%20Men.txt
 240,american pie,1999,6.9,107961,http://www.dailyscript.com/scripts/american-pie_production.html
 243,annie hall,1977,8.3,66781,http://www.dailyscript.com/scripts/Annie%20Hall.txt
 245,antz,1998,6.8,37825,http://www.dailyscript.com/scripts/antz.html
@@ -119,10 +119,10 @@ movie_id,title,year,imdb_rating,imdb_votes,raw_script_url
 269,the big lebowski,1998,8.2,182170,http://www.dailyscript.com/scripts/Big%20Lebowski%20The.txt
 270,the black dahlia,2006,5.6,35706,http://www.dailyscript.com/scripts/black-dahlia_early.html
 271,blade ii,2002,6.6,51826,http://www.horrorlair.com/scripts/blade2.html
-272,blade,1998,7.0,65885,http://www.horrorlair.com/scripts/blade.html
+272,blade,1998,7,65885,http://www.horrorlair.com/scripts/blade.html
 276,blow,2001,7.4,71334,http://www.dailyscript.com/scripts/blow.html
 282,the bourne identity,2002,7.7,124918,http://www.dailyscript.com/scripts/Bourne+Identity+The.txt
-283,brazil,1985,8.0,77350,http://www.scifiscripts.com/scripts/brazil.txt
+283,brazil,1985,8,77350,http://www.scifiscripts.com/scripts/brazil.txt
 284,bringing out the dead,1999,6.8,31285,http://www.dailyscript.com/scripts/Bringing+Out+The+Dead.txt
 289,casino,1995,8.1,111223,http://www.dailyscript.com/scripts/Casino.txt
 290,catwoman,2004,3.2,35065,http://www.scifiscripts.com/scripts/catwoman.txt
@@ -130,14 +130,14 @@ movie_id,title,year,imdb_rating,imdb_votes,raw_script_url
 296,chinatown,1974,8.5,80698,http://www.dailyscript.com/scripts/Chinatown.txt
 297,nuovo cinema paradiso,1988,8.5,46801,http://www.dailyscript.com/scripts/cinema_paradiso.html
 298,citizen kane,1941,8.6,140517,http://www.aellea.com/script/citizenkane_script.txt
-299,clerks.,1994,8.0,90972,http://www.dailyscript.com/scripts/Clerks.txt
+299,clerks.,1994,8,90972,http://www.dailyscript.com/scripts/Clerks.txt
 300,cliffhanger,1993,6.2,34880,http://www.dailyscript.com/scripts/cliffhanger_stallone.html
 301,a clockwork orange,1971,8.5,197372,http://www.scifiscripts.com/scripts/clockwork.txt
 302,collateral,2004,7.8,106866,http://www.dailyscript.com/scripts/collateral_darabont.html
 303,conspiracy theory,1997,6.5,36045,http://www.dailyscript.com/scripts/conspiracy-theory.html
 304,contact,1997,7.4,75043,http://www.scifiscripts.com/scripts/contact.txt
 305,cool hand luke,1967,8.3,46514,http://www.aellea.com/script/cool_hand_luke.html
-307,crash,2004/I,8.0,174003,http://www.dailyscript.com/scripts/Crash+(1996).txt
+307,crash,2004,8,174003,http://www.dailyscript.com/scripts/Crash+(1996).txt
 311,the crow,1994,7.6,55886,http://www.horrorlair.com/scripts/crow.txt
 312,cruel intentions,1999,6.7,67532,http://www.dailyscript.com/scripts/cruel-intentions.html
 315,dark city,1998,7.8,64262,http://www.dailyscript.com/scripts/dark-city_early-rewrite.html
@@ -168,52 +168,52 @@ movie_id,title,year,imdb_rating,imdb_votes,raw_script_url
 364,gandhi,1982,8.2,52160,http://www.dailyscript.com/scripts/Gandhi.txt
 365,gattaca,1997,7.8,72063,http://www.dailyscript.com/scripts/gattaca_early.html
 368,glengarry glen ross,1992,7.9,32882,http://www.dailyscript.com/scripts/glengarry.html
-369,the godfather: part ii,1974,9.0,251290,http://www.dailyscript.com/scripts/godfather2.html
-371,gone in sixty seconds,2000,6.0,74474,http://www.dailyscript.com/scripts/gone_in_60_seconds.html
+369,the godfather: part ii,1974,9,251290,http://www.dailyscript.com/scripts/godfather2.html
+371,gone in sixty seconds,2000,6,74474,http://www.dailyscript.com/scripts/gone_in_60_seconds.html
 372,goodfellas,1990,8.8,234582,http://www.dailyscript.com/scripts/goodfellas.html
 373,good will hunting,1997,8.1,154419,http://www.moviescriptsandscreenplays.com/BenandMatt/goodwillhunting.txt
 375,grosse pointe blank,1997,7.4,41877,http://www.dailyscript.com/scripts/Grosse%20Pointe%20Blank.txt
 379,halloween,1978,7.9,64690,http://www.dailyscript.com/scripts/Halloween.txt
 381,hannibal,2001,6.4,75788,http://www.dailyscript.com/scripts/Hannibal%20-%20Zaillian.txt
-389,hostage,2005/I,6.6,37868,http://home.online.no/~bhundlan/scripts/hostage.htm
+389,hostage,2005,6.6,37868,http://home.online.no/~bhundlan/scripts/hostage.htm
 390,hotel rwanda,2004,8.3,94404,http://www.dailyscript.com/scripts/hotel_rwanda.html
 395,the hudsucker proxy,1994,7.4,32691,http://www.dailyscript.com/scripts/Hudsucker%20Proxy%20The.txt
-398,insomnia,2002/I,7.3,69635,http://www.dailyscript.com/scripts/insomnia.html
+398,insomnia,2002,7.3,69635,http://www.dailyscript.com/scripts/insomnia.html
 399,interview with the vampire: the vampire chronicles,1994,7.4,80077,http://www.scifiscripts.com/scripts/interview.txt
 402,it's a wonderful life,1946,8.7,103290,http://www.aellea.com/script/itsawonderfullife.txt
 408,jerry maguire,1996,7.3,79706,http://www.awesomefilm.com/script/jerryMaguire.txt
 409,jurassic park iii,2001,5.7,62564,http://www.dailyscript.com/scripts/jp3.html
-410,the lost world: jurassic park,1997,6.0,78169,http://www.horrorlair.com/scripts/jurassic2_thw.txt
+410,the lost world: jurassic park,1997,6,78169,http://www.horrorlair.com/scripts/jurassic2_thw.txt
 411,jurassic park,1993,7.9,153737,http://www.scifiscripts.com/scripts/JurassicPark_1stDraft.txt
 412,freddy vs. jason,2003,5.8,39850,http://www.horrorlair.com/scripts/jvsf_bm.txt
 414,king kong,2005,7.6,134187,http://www.scifiscripts.com/scripts/kingkong.txt
 419,the silence of the lambs,1991,8.7,251237,http://www.horrorlair.com/scripts/lambsfinal.txt
 422,lock stock and two smoking barrels,1998,8.2,129117,http://www.scifiscripts.com/msol/lockstock_screenplay.txt
 425,lost in translation,2003,7.9,132645,http://www.dailyscript.com/scripts/lost-in-translation-script.html
-428,magnolia,1999,8.0,123476,http://www.dailyscript.com/scripts/magnolia.html
-429,the man in the iron mask,1998/I,6.1,36684,http://www.dailyscript.com/scripts/man_in_iron_mask_95.html
+428,magnolia,1999,8,123476,http://www.dailyscript.com/scripts/magnolia.html
+429,the man in the iron mask,1998,6.1,36684,http://www.dailyscript.com/scripts/man_in_iron_mask_95.html
 432,man on the moon,1999,7.4,49915,http://www.scifiscripts.com/msol/manonthemoon.txt
 433,the matrix,1999,8.7,389480,http://www.scifiscripts.com/scripts/matrix_97_draft.txt
 435,meet joe black,1998,6.9,56839,http://www.awesomefilm.com/script/meetjoeblack.txt
 436,memento,2000,8.7,281027,http://www.dailyscript.com/scripts/memento.html
-437,miami vice,2006,6.0,52448,http://www.dailyscript.com/scripts/miamivice.html
-438,midnight cowboy,1969,8.0,34405,http://www.dailyscript.com/scripts/Midnight%20Cowboy.txt
+437,miami vice,2006,6,52448,http://www.dailyscript.com/scripts/miamivice.html
+438,midnight cowboy,1969,8,34405,http://www.dailyscript.com/scripts/Midnight%20Cowboy.txt
 441,misery,1990,7.8,41563,http://www.dailyscript.com/scripts/Misery.txt
 442,mission: impossible ii,2000,5.7,86452,http://www.dailyscript.com/scripts/mission-impossible-2_shoot.html
 443,mission: impossible,1996,6.9,87677,http://www.dailyscript.com/scripts/mission-impossible_shoot.html
 445,monty python and the holy grail,1975,8.4,157683,http://www.angelfire.com/movies/closedcaptioned/mp-holy.txt
-448,mulholland dr.,2001,8.0,105859,http://www.dailyscript.com/scripts/mulholland_drive.html
+448,mulholland dr.,2001,8,105859,http://www.dailyscript.com/scripts/mulholland_drive.html
 452,my best friend's wedding,1997,6.2,37682,http://www.awesomefilm.com/script/mybestfriendswedding.txt
 454,natural born killers,1994,7.1,73047,http://www.dailyscript.com/scripts/natural-born-killers_shoot.html
 456,the negotiator,1998,7.2,46983,http://www.angelfire.com/movies/moviefreak/negotiator.html
-459,the nightmare before christmas,1993,8.0,81753,http://www.dailyscript.com/scripts/nightmare-b4-xmas_early.html
+459,the nightmare before christmas,1993,8,81753,http://www.dailyscript.com/scripts/nightmare-b4-xmas_early.html
 462,notting hill,1999,6.9,67217,http://www.awesomefilm.com/script/nothill.txt
 463,one flew over the cuckoo's nest,1975,8.9,219739,http://www.dailyscript.com/scripts/One%20Flew%20Over%20The%20Cuckoo's%20Nest.txt
 465,on the waterfront,1954,8.4,42010,http://www.dailyscript.com/scripts/onthewaterfront.html
 467,out of sight,1998,7.2,38595,http://www.dailyscript.com/scripts/Out%20Of%20Sight.txt
 468,pearl harbor,2001,5.4,97519,http://www.dailyscript.com/scripts/pearl_harbor_early.html
 471,philadelphia,1993,7.6,54221,http://www.dailyscript.com/scripts/philadelphia.html
-472,pitch black,2000,7.0,55982,http://www.dailyscript.com/scripts/pitch-black_shooting.html
+472,pitch black,2000,7,55982,http://www.dailyscript.com/scripts/pitch-black_shooting.html
 473,planet of the apes,2001,5.5,73596,http://www.scifiscripts.com/scripts/POTA_Remake.txt
 474,platoon,1986,8.2,110867,http://www.dailyscript.com/scripts/Platoon.txt
 477,point break,1991,6.9,37722,http://www.awesomefilm.com/script/pointbreak.html
@@ -233,12 +233,12 @@ movie_id,title,year,imdb_rating,imdb_votes,raw_script_url
 504,schindler's list,1993,8.9,282473,http://www.awesomefilm.com/script/schindlerslist.txt
 505,scream 2,1997,5.9,48988,http://www.horrorlair.com/scripts/scream2.txt
 506,scream 3,2000,5.3,38870,http://www.horrorlair.com/scripts/scream3_early_draft.txt
-507,scream,1996/I,7.2,92543,http://www.dailyscript.com/scripts/Scream.txt
+507,scream,1996,7.2,92543,http://www.dailyscript.com/scripts/Scream.txt
 509,the searchers,1956,8.1,30138,http://www.dailyscript.com/scripts/Searchers%20The.txt
 511,shakespeare in love,1998,7.4,78654,http://www.dailyscript.com/scripts/Shakespeare%20In%20Love.txt
 514,the shining,1980,8.5,182077,http://www.dailyscript.com/scripts/shining.html
 517,sleepy hollow,1999,7.5,108951,http://www.dailyscript.com/scripts/sleepy-hollow_shooting.html
-518,sling blade,1996,8.0,42087,http://www.dailyscript.com/scripts/Sling%20Blade.txt
+518,sling blade,1996,8,42087,http://www.dailyscript.com/scripts/Sling%20Blade.txt
 522,some like it hot,1959,8.4,68749,http://www.dailyscript.com/scripts/Some+Like+It+Hot.txt
 525,south park: bigger longer & uncut,1999,7.8,80257,http://www.dailyscript.com/scripts/south-park.html
 528,sphere,1998,5.6,31924,http://www.dailyscript.com/scripts/sphere_shooting.html
@@ -252,11 +252,11 @@ movie_id,title,year,imdb_rating,imdb_votes,raw_script_url
 550,the game,1997,7.7,75861,http://www.dailyscript.com/scripts/the-game-early.html
 551,the haunting,1999,4.6,32086,http://www.dailyscript.com/scripts/the-haunting_production.html
 553,the man who wasn't there,2001,7.7,41452,http://www.dailyscript.com/scripts/Man%20Who%20Wasn't%20There%20The.txt
-555,the truman show,1998,8.0,160825,http://www.dailyscript.com/scripts/the-truman-show_shooting.html
+555,the truman show,1998,8,160825,http://www.dailyscript.com/scripts/the-truman-show_shooting.html
 556,the x files,1998,6.8,39090,http://www.dailyscript.com/scripts/the-x-files_production.html
 557,the cell,2000,6.2,37417,http://www.dailyscript.com/scripts/the_cell.html
 558,the third man,1949,8.5,51872,http://www.dailyscript.com/scripts/the_third_man.html
-559,the beach,2000/I,6.3,55734,http://www.scifiscripts.com/msol/beach/script01_15.htm
+559,the beach,2000,6.3,55734,http://www.scifiscripts.com/msol/beach/script01_15.htm
 566,the pianist,2002,8.5,138080,http://www.dailyscript.com/scripts/Pianist%20The.txt
 568,the sting,1973,8.4,67231,http://www.dailyscript.com/scripts/Sting%20The.txt
 570,three kings,1999,7.3,69757,http://www.dailyscript.com/scripts/three-kings_unproduced.html
@@ -286,4 +286,4 @@ movie_id,title,year,imdb_rating,imdb_votes,raw_script_url
 612,watchmen,2009,7.8,135229,http://www.scifiscripts.com/scripts/wtchmn.txt
 613,xxx,2002,5.6,53505,http://www.dailyscript.com/scripts/xXx.txt
 614,x-men,2000,7.4,122149,http://www.scifiscripts.com/scripts/xmenthing.txt
-615,young frankenstein,1974,8.0,57618,http://www.horrorlair.com/scripts/young.txt
+615,young frankenstein,1974,8,57618,http://www.horrorlair.com/scripts/young.txt
